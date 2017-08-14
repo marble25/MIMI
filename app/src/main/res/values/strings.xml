@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">미미</string>
+    <string name="sign_in"><u>회원가입하기</u></string>
 </resources>

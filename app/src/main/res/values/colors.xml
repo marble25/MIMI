@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="pinkish_grey">#bdbdbd</color>
+    <color name="warm_grey_two">#757575</color>
+    <color name="carnation_pink">#ff729f</color>
+    <color name="warm_pink">#ff4081</color>
 </resources>

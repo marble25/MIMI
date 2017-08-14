@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="TextView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="left"
+        android:text="TextView" />
+
+    <LinearLayout
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="118dp"
+            android:layout_height="40dp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.41" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.27" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_weight="0.38"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:text="Button"
+            android:layout_weight="0.33" />
+    </LinearLayout>
+
+</LinearLayout>
