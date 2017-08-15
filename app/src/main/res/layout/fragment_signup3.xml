@@ -56,25 +56,4 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="TextView" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:text="Button" />
-    </LinearLayout>
-
 </LinearLayout>

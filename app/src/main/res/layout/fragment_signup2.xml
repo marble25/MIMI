@@ -67,25 +67,4 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="59dp"
-            android:layout_weight="0.38"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="61dp"
-            android:text="Button"
-            android:layout_weight="0.33" />
-    </LinearLayout>
-
 </LinearLayout>

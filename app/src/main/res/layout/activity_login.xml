@@ -130,6 +130,7 @@
                 android:text="아직 계정이 없으신가요?"
                 android:textColor="@color/warm_pink"/>
             <TextView
+                android:id="@+id/txtBtnSign"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sign_in"
