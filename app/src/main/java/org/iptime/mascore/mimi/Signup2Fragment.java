@@ -37,6 +37,7 @@ public class Signup2Fragment extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked == true) {
                     chkMale.setTextColor(Color.WHITE);
+                    chkFemale.setChecked(false);
                 } else {
                     chkMale.setTextColor(Color.DKGRAY);
                 }
@@ -48,6 +49,7 @@ public class Signup2Fragment extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked == true) {
                     chkFemale.setTextColor(Color.WHITE);
+                    chkMale.setChecked(false);
                 } else {
                     chkFemale.setTextColor(Color.DKGRAY);
                 }

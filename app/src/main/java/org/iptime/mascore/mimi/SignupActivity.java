@@ -47,11 +47,12 @@ public class SignupActivity extends AppCompatActivity {
                     break;
                 case 1:
                     mBtnPre.setText("이전");
+                    mBtnNext.setText("완료");
                     viewPager.setCurrentItem(2);
                     break;
                 case 2:
                     mBtnPre.setVisibility(View.GONE);
-                    mBtnNext.setText("완료");
+                    mBtnNext.setText("로그인하러가기");
                     mBtnNext.setGravity(Gravity.CENTER);
                     viewPager.setCurrentItem(3);
                     break;

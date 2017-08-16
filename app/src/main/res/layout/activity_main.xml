@@ -15,9 +15,9 @@
         android:id="@+id/tabBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:elevation="6dp"
-        app:tabGravity="center" />
-
-
+        android:background="#FFFFFF"
+        android:elevation="10dp"
+        app:tabGravity="center"
+        android:minHeight="?attr/actionBarSize"
+        android:scaleY="-1"/>
 </LinearLayout>
