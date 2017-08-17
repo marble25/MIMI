@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
+                tabLayout.setSelectedTabIndicatorHeight(6);
+                TabAttr();
             }
 
             @Override
@@ -54,6 +56,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //탭스트립 색상 변경
+    public void TabAttr() {
+        switch (tabLayout.getSelectedTabPosition()) {
+            case 0:
+                tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.indicator_1));
+                break;
+            case 1:
+                tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.indicator_2));
+                break;
+            case 2:
+                tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.indicator_3));
+                break;
+            case 3:
+                tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.indicator_4));
+                break;
+        }
+    }
 
     //종료확인 여부 메서드
     public void onBackPressed() {
