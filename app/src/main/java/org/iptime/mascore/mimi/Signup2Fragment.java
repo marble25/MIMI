@@ -32,6 +32,7 @@ public class Signup2Fragment extends Fragment {
         chkMale = (CheckBox) view.findViewById(R.id.radioButtonMale);
         chkFemale = (CheckBox) view.findViewById(R.id.radioButtonFemale);
 
+
         chkMale.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -58,5 +59,6 @@ public class Signup2Fragment extends Fragment {
 
         return view;
     }
+
 
 }
