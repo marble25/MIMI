@@ -44,7 +44,7 @@ public class Signup3Fragment extends Fragment {
                     public void run(){
                         builder.dismiss();
                     }
-                }, 1500);
+                }, 1000);
             }
         });
 
