@@ -61,7 +61,7 @@ public class DatabaseController {
 		
 		if(result.contains("Fail")) {
 			System.out.println(result);
-			
+
 			if(result.contains("3")) { // ID
 				return 2;
 			} else if(result.contains("4")) { //
@@ -73,9 +73,17 @@ public class DatabaseController {
 		} else if(result.contains("Success")) {
 			return 0;
 		}
-		
+
 		return 1;
-	}	
+	}
+    public String databaseWork(String module) {
+        String result = databaseConnect(module, "");
+
+        if(result.equals("Fail 2")) {
+            return "";
+        }
+        return result;
+    }
 	public int insertBoard(Map<String, String> data) {
 		return databaseWork(data, "insertBoard.php");
 	}
@@ -111,5 +119,11 @@ public class DatabaseController {
 	}
 	public int email(Map<String, String> data) {
 		return databaseWork(data, "email.php");
+	}
+	public String getBoard(boolean isMen, int limit, int offset) {
+		return databaseWork("getBoard.php?gender=" + (isMen?0:1) + "&limit=" + limit + "&offset=" + offset);
+	}
+	public String getBoard(int limit, int offset) {
+		return databaseWork("getBoard.php?limit=" + limit + "&offset=" + offset);
 	}
 }

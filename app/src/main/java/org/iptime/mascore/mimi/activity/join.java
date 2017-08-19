@@ -30,7 +30,14 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * join 액티비티
+ *
+ * 회원가입 1, 2, 3, 4 창 모두 이 액티비티에서 처리
+ */
 public class join extends AppCompatActivity {
+
+    // 회원가입 창이 넘어갈 때마다 전역 변수에 저장
 
     public String id = "";
     public String pw = "";
@@ -46,6 +53,7 @@ public class join extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
+        // activity_join_1을 빈 공간에 채워넣음음
         ViewGroup inclusionViewGroup = (ViewGroup)findViewById(R.id.layoutJoin);
 
         View join1 = LayoutInflater.from(this).inflate(
@@ -174,7 +182,7 @@ public class join extends AppCompatActivity {
                 major.setAdapter(adapter);
 
                 TextView textView = (TextView)findViewById(R.id.textJoinMail);
-                textView.setText(Information.mailList.get(indexes));
+                textView.setText("@" + Information.mailList.get(indexes));
             }
             public void onNothingSelected(AdapterView<?> parent)
             {
@@ -193,7 +201,8 @@ public class join extends AppCompatActivity {
             return;
         }
 
-        email = editEmail.getText().toString() + "@" + textEmail.getText().toString();
+        email = editEmail.getText().toString() + textEmail.getText().toString();
+        System.out.println("Email : " + email);
         univ = spinnerUniv.getSelectedItem().toString();
         major = spinnerMajor.getSelectedItem().toString();
 

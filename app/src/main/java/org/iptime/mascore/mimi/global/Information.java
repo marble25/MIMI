@@ -31,6 +31,13 @@ public class Information {
     public static HashMap<Integer, ArrayList<Integer>> conList = new HashMap<>();
     public static HashMap<Integer, String> mailList = new HashMap<>();
 
+    public static boolean isJsonSet() {
+        if(univList.isEmpty()) {
+            return false;
+        }
+        return true;
+    }
+
     public static String loadJSONFromAsset(Context context, String filename) {
         String json = null;
         try {
@@ -127,5 +134,33 @@ public class Information {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+    public static ArrayList<HashMap<String, String>> parseBoard(Context context, String data) {
+        ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
+        try {
+            JSONArray array = new JSONArray(data);
+            for(int i=0;i<array.length();i++) {
+                JSONObject el = array.getJSONObject(i);
+                String idx = el.getString("idx");
+                String id = el.getString("id");
+                String type = el.getString("type");
+                String title = el.getString("title");
+                String detail = el.getString("detail");
+                String gender = el.getString("gender");
+
+                HashMap<String, String> map = new HashMap<>();
+                map.put("idx", idx);
+                map.put("id", id);
+                map.put("type", type);
+                map.put("title", title);
+                map.put("detail", detail);
+                map.put("gender", gender);
+
+                arrayList.add(map);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return arrayList;
     }
 }

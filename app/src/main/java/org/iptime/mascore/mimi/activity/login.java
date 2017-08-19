@@ -27,8 +27,10 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        if(!Information.isJsonSet()) {
+            Information.parseJSON(getApplicationContext());
+        }
 
-        Information.parseJSON(getApplicationContext());
 
         SharedPreferences sp = getSharedPreferences("auto", Activity.MODE_PRIVATE);
         isAutoLogin = sp.getBoolean("auto", false);
