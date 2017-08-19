@@ -1,4 +1,6 @@
-package web;
+package org.iptime.mascore.mimi.web;
+
+import org.iptime.mascore.mimi.global.Secrets;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,12 +11,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
 
-import global.Secrets;
-
 public class DatabaseController {
 	public static final String defaultAddress = "http://mascore.iptime.org/mimi/";
 	
-	public String databaseConnect(String module, String args) { // Database에 접속하는 기본 메소드
+	public String databaseConnect(String module, String args) { // Database
 
 		try {
 			URL url = new URL(defaultAddress + module);
@@ -24,7 +24,7 @@ public class DatabaseController {
             connection.setDoOutput(true);
             connection.setDoInput(true);
 
-            String body = "pw=" + Secrets.databasepw; // 인증 비밀번호
+            String body = "pw=" + Secrets.databasepw; //
             body += args;
 
             OutputStream outputStream = connection.getOutputStream();
@@ -62,10 +62,12 @@ public class DatabaseController {
 		if(result.contains("Fail")) {
 			System.out.println(result);
 			
-			if(result.contains("3")) { // ID 체크에서 동일한 아이디가 존재할 때
+			if(result.contains("3")) { // ID
 				return 2;
-			} else if(result.contains("4")) { // 로그인 실패
+			} else if(result.contains("4")) { //
 				return 3;
+			} else if(result.contains("5")) {
+				return 4;
 			}
 			return 1;
 		} else if(result.contains("Success")) {
@@ -101,7 +103,13 @@ public class DatabaseController {
 	public int checkID(Map<String, String> data) {
 		return databaseWork(data, "checkId.php");
 	}
+	public int checkEmail(Map<String, String> data) {
+		return databaseWork(data, "checkEmail.php");
+	}
 	public int login(Map<String, String> data) {
 		return databaseWork(data, "login.php");
+	}
+	public int email(Map<String, String> data) {
+		return databaseWork(data, "email.php");
 	}
 }

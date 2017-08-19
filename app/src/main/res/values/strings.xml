@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">MIMI</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <string-array name="items_num">
+        <item>학번</item>
+        <item>17학번</item>
+        <item>16학번</item>
+        <item>15학번</item>
+        <item>14학번</item>
+        <item>13학번</item>
+        <item>12학번</item>
+        <item>11학번</item>
+        <item>10학번</item>
+        <item>09학번</item>
+        <item>08학번</item>
+        <item>07학번</item>
+    </string-array>
+
+    <!-- Strings related to Login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>

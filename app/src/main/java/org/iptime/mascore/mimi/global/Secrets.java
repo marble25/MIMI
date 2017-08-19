@@ -1,5 +1,6 @@
-package global;
+package org.iptime.mascore.mimi.global;
 
 public class Secrets {
-	public static String databasepw = "9c81dec6808d1c8ca3bdc9ff9aad55be"; // µ¥ÀÌÅÍº£ÀÌ½º Á¢¼Ó¿¡ ÇÊ¿äÇÑ ¾ÏÈ£
+	public static String databasepw = "9c81dec6808d1c8ca3bdc9ff9aad55be"; // ë°ì´í„°ë² ì´ìŠ¤ë¥¼ ì ‘ì†í•  ë•Œì— í•„ìš”í•œ ë¹„ë°€ë²ˆí˜¸
+	public static String id;
 }

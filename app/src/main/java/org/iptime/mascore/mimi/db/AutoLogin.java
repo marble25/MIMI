@@ -19,4 +19,12 @@ public class AutoLogin {
         editor.putString("pw", pw);
         editor.apply();
     }
+
+    public void disableAuto(Context context) {
+        SharedPreferences sp = context.getSharedPreferences("auto", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+
+        editor.putBoolean("auto", false);
+        editor.apply();
+    }
 }
